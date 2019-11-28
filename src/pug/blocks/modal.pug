@@ -1,0 +1,19 @@
+#modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalTitle' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content.p-5
+			.modal-header.p-0.border-0
+				h2 Забронировать
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+			form.mb-4
+				label.label-container.error
+					input.input-text(type="text")
+					span.label-text Представьтесь, пожалуйста
+				label.label-container
+					input.input-text(type="text")
+					span.label-text Ваш номер телефона 
+				
+				label.label-container
+					input.checkbox.h-auto.d-inline-block(type="checkbox") 
+					span.text-small: small С <a href="">политикой конфиденциальности</a> ознакомлен(а), даю согласие на обработку моих персональных данных
+				button.btn.justify-content-center(type='submit') Отправить

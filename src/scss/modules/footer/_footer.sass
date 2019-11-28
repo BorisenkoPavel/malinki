@@ -1,0 +1,67 @@
+footer
+  flex: 0 0 auto
+  .embed-responsive
+    picture
+      transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+      backface-visibility: hidden
+    &:hover
+      picture
+        transform: scale(1.2)
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+.contacts-block
+  dd
+    margin-bottom: 1rem
+.icon-contacts
+  fill: $secondary
+  width: 15px
+  height: 15px
+  margin-right: 5px
+.contacts-phone
+  a
+    margin-bottom: .3rem
+    padding-left: 20px
+    display: inline-block
+  a:first-of-type
+    padding-left: 0
+
+.instagram-sign
+  flex: 1 1 100%
+.icon-social
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    border-radius: 50%
+    border: 2px solid #fff
+    animation-fill-mode: forwards
+    box-shadow: 0 0 2px 4px #fff
+    transform: scale(0)
+.instagram-sign:hover .icon-social:before
+    animation: boom .5s ease
+    animation-fill-mode: forwards
+@keyframes boom
+  0
+    transform: scale(0)
+    opacity: 0
+  50%
+    transform: scale(1)
+    opacity: 1
+  100%
+    transform: scale(2)
+    opacity: 0
+.icon-insta
+  width: 40px
+  height: 40px
+  fill: #fff
+  flex: 0 0 auto
+
+.instagram-photo
+  padding: 2px!important
+.instagram-block
+  transform: translate(2px, -2px)
+  
+

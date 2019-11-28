@@ -1,0 +1,66 @@
+header
+  background-color: #fff
+  position: relative
+  height: 86px
+  flex: 0 0 auto
+.logo-inline
+  transform: translateY(-6px)
+.logo
+  width: 263px
+  a
+    position: absolute
+    width: 226px
+    height: 216px
+    background-color: #fff
+    top: -50px
+    z-index: 20
+    border-radius: 50%
+    display: block
+    left: 0
+    right: 0
+    margin: auto
+    text-align: center
+  img
+    width: 140px
+    height: 120px
+    transform: translateY(70px)
+    
+.nav
+  flex: 1 1
+  a
+    padding: 5px 10px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 10px
+      right: 10px
+      height: 2px
+      background-color: $accent
+      width: 0
+      margin: auto
+      bottom: 0
+      transition: .5s ease
+    &:hover
+      color: $accent
+      &:before
+        width: calc(100% - 20px)
+
+.header-mobile
+  transform: translatey(-100%)
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 500
+  background-color: #fff
+  .icon-phone
+    fill: $accent
+    margin-bottom: 3px
+  &.fixed
+    transform: translate(0)
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.2)
+.hamburger
+  position: relative
+  z-index: 500

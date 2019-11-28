@@ -1,0 +1,139 @@
+.btn.btn-secondary
+	background-color: $secondary
+	&:before
+		background-color: $accent
+	&:hover
+		// background-color: $accent
+.btn.btn-white
+	background-color: white
+	color: $text
+	&:before
+		background-color: $secondary
+	&:hover
+		color: #fff
+		// background-color: $secondary
+.btn
+	font-size: 18px
+	font-weight: 700
+	border: none
+	cursor: pointer
+	display: inline-flex
+	background-color: $accent
+	border-radius: 0
+	align-items: center
+	height: 3.375rem
+	white-space: nowrap
+	color: #fff
+	transition: .3s ease
+	overflow: hidden
+	position: relative
+	transform: translate(0)
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 0
+		height: 0
+		margin: auto
+		background-color: $secondary
+		transition: .3s ease
+		border-radius: 50%
+		z-index: -1
+	&:hover
+		// background-color: $secondary
+		color: #fff
+		&:before
+			width: 300px
+			height: 300px
+			transition: .2s linear
+
+.btn-lg
+	font-size: 20px
+	padding-top: 13px
+
+.swiper-arrow.swiper-arrow--small
+	width: 20px
+	height: 14px
+.swiper-arrow
+	fill: $accent
+	width: 30px
+	height: 30px
+	transition: .3s ease
+.swiper-button-prev.swiper-button--small, .swiper-button-next.swiper-button--small
+	width: 36px
+	height: 36px
+	position: static
+	top: auto
+	margin: 0
+	background-color: #fff
+	.swiper-arrow
+		fill: $text
+.swiper-button-prev, .swiper-button-next
+	background-image: none
+	width: 67px
+	height: 100px
+	background: rgba(255, 255, 255, 0.6)
+	box-shadow: 0px 0px 12px rgba(80, 50, 58, 0.25)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: .3s ease
+	margin-top: -33.5px
+	z-index: 60
+	&:hover
+		background-color: #FFA800
+		.swiper-arrow
+			fill: #fff
+.swiper-button-next
+	right: 5%
+	left: auto
+.swiper-button-prev
+	left: 5%
+	right: auto
+	transform: rotate(180deg)
+.swiper-pagination
+	bottom: 0
+	display: flex
+	margin-left: -4px
+.swiper-pagination-bullet.swiper-pagination-bullet-active
+	transform: scaley(1.5)
+	background-color: $secondary
+.swiper-pagination-bullet
+	width: 18px
+	height: 3px
+	border-radius: 0
+	background-color: $accent
+	opacity: 1
+	position: relative
+	transition: .3s ease
+
+.go-top.fixed
+	opacity: 1
+	transform: translate(0)
+.go-top
+	background-image: none
+	width: 67px
+	height: 100px
+	background: rgba(255, 255, 255, 0.6)
+	box-shadow: 0px 0px 12px rgba(80, 50, 58, 0.25)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: background-color .3s ease, transform .5s ease, opacity .5s ease, right .4s cubic-bezier(0.645, 0.045, 0.355, 1)
+	margin-top: -33.5px
+	z-index: 60
+	bottom: 20px
+	position: fixed
+	right: 15px
+	cursor: pointer
+	opacity: 0
+	transform: translatey(30px)
+	&:hover
+		background-color: $secondary
+		svg
+			fill: #fff
+	svg
+		transform: rotate(-90deg)
+

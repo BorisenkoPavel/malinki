@@ -1,0 +1,224 @@
+extends templates/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+block content
+	section.section-banner.dark-overlay
+		+pic('banner bg', 'content', 'banner','jpg')
+		.swiper-container.slider-banner.z-index
+			.swiper-wrapper
+				.swiper-slide.text-white.text-center
+					.container
+						.row
+							.col-lg-6.offset-lg-3
+								h1 Русская банька на березовых дровах
+								p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
+				.swiper-slide.text-white.text-center
+					.container
+						.row
+							.col-lg-6.offset-lg-3
+								h1 Русская банька на березовых дровах
+								p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
+		
+			.btn-container.text-center
+				.btn.btn-lg ЗВОНИТЕ: 58-88-58	
+		.swiper-button-prev.banner-button-prev.d-none.d-lg-flex
+			+icon('arrow','swiper-arrow')
+		.swiper-button-next.banner-button-next.d-none.d-lg-flex
+			+icon('arrow','swiper-arrow')
+	section.section-halls.section-pattern
+		.container
+			h1 Наши залы
+			.row
+				.col-lg-4.d-flex.img-block__wrapper
+					.img-block.wow(data-wow-offset="200")
+						+pic('img-block__photo', 'content', 'hall1','jpg')
+						.img-block__title Финский с водной горкой TOBOGGAN
+				.col-lg-4.d-flex.img-block__wrapper
+					.img-block.wow(data-wow-offset="200")
+						+pic('img-block__photo', 'content', 'hall2','jpg')
+						.img-block__title Турецкий зал с хамамом
+				.col-lg-4.d-flex.img-block__wrapper
+					.img-block.wow(data-wow-offset="200")
+						+pic('img-block__photo', 'content', 'hall3','jpg')
+						.img-block__title Русская банька на березовых дровах				
+	section.section-advantages.section-pattern.section-pattern--bottom
+		.container
+			h1.text-center Баня — это здорово!
+			.row
+				.col-sm-4.text-center
+					.info-block
+						img.info-block__img.mb-3(src="img/general/sauna.svg", alt="")
+						.info-block__content
+							.info-block__title.mb-1 3 бани вместимостью до 8 и до 17 человек
+							ul.info-block__desc
+								li с купелями, хамамом и джакузи
+				.col-sm-4.text-center
+					.info-block
+						img.info-block__img.mb-3(src="img/general/bbq.svg", alt="")
+						.info-block__content
+							.info-block__title.mb-1 Уютный дворик с мангалом и беседкой
+							ul.info-block__desc
+								li разнообразит ваш отдых
+				.col-sm-4.text-center
+					.info-block
+						img.info-block__img.mb-3(src="img/general/slide.svg", alt="")
+						.info-block__content
+							.info-block__title.mb-1 Увлекательная водная горка TOBOGGAN
+							ul.info-block__desc
+								li приводит в восторг детей и взрослых
+	section.section-promo.text-white.dark-overlay
+		+pic('promo bg','content','promo','jpg')
+		.container.z-index.position-relative
+			.row
+				.col-lg-7.promo-content.wow(data-wow-offset="200")
+					h1.mb-5 Забронируйте сейчас в&nbsp;один клик!
+					.btn.btn-secondary(data-toggle="modal" data-target="#modal") ЗАБРОНИРОВАТЬ							
+	section.section-about-us
+		.container
+			h1 Малинки в цифрах
+			.row.text-white
+				.col-sm-6.col-lg-4.about-item
+					.embed-responsive.embed-responsive-4by3
+						.glow-wrap
+							i.glow
+						+pic('embed-responsive-item bg','content','about1','jpg')
+					.about-item__content
+						.about-item__num.about-item__num1.wow 0
+						.about-item__text Радуем Вас с 2015 года
+				.col-sm-6.col-lg-4.about-item
+					.embed-responsive.embed-responsive-4by3
+						.glow-wrap
+							i.glow
+						+pic('embed-responsive-item bg','content','about2','jpg')
+					.about-item__content
+						.about-item__num.about-item__num2.wow 0
+						.about-item__text 1828 довольных клиентов
+				.col-sm-6.offset-sm-3.offset-lg-0.col-lg-4.about-item
+					.embed-responsive.embed-responsive-4by3
+						.glow-wrap
+							i.glow
+						+pic('embed-responsive-item bg','content','about3','jpg')
+					.about-item__content
+						.about-item__num.about-item__num3.wow 0
+						.about-item__text У нас 3 уютных зала 
+	section.section-slider.section-pattern.section-pattern--bottom
+		.container
+			h1 Малинки — бани и сауны в Барнауле
+			.row
+				.col-lg-6.order-1.order-lg-0.sider-left-block.wow(data-wow-offset="200")
+					p: b Банный комплекс "Малинки", приглашает Вас окунуться в незабываемый водный мир!
+					p.
+						В теплые, циркуляционные бассейны с гидро-аэро массажем,
+						гейзером, противотоком. Понежиться в большой джакузи
+						и получить массу удовольствий. Прокатиться с водной горки в бассейн с "морской черепахой" в стиле "океанской стихии"
+						и почувствовать себя повелителем подводного мира.
+					ul.line-decoration
+						li Финская парная, сделанная из осины, приятный запах, целебные свойства, прекрасное настроение.
+						li Русская баня - парит здоровья дарит.
+						li Турецкая баня (хамам) с высокой влажностью - улучшает здоровье, привносит положительные эмоции и ощущение общей гармонии души и тела. Хамам приближает нас к пониманию "средиземноморского рая".
+					a.link-arrow(href="")
+						| Подробнее
+						+icon('arrow')
+				.col-lg-6
+					.swiper-container.gallery.wow(data-wow-offset="200")
+						.swiper-wrapper
+							.swiper-slide
+								.embed-responsive.embed-responsive-4by3
+									+pic('about-item embed-responsive-item bg','content','about3','jpg')
+							.swiper-slide
+								.embed-responsive.embed-responsive-4by3
+									+pic('about-item embed-responsive-item bg','content','about2','jpg')
+							.swiper-slide
+								.embed-responsive.embed-responsive-4by3
+									+pic('about-item embed-responsive-item bg','content','about3','jpg')
+						.swiper-pagination.gallery-pagination
+	section.section-reviews.section-pattern.bg-primary.text-white
+		.container
+			h1.text-center Отзывы
+			.swiper-container.reviews.mb-3.pt-3
+				.swiper-wrapper
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo1.jpg') center/cover")
+						p.reviews__text.
+							Отдыхали здесь несколько раз большой
+							компанией и все остались довольны.
+							Чисто, просторно и не дорого. Вкусно кормят. Обслуживание отличное
+							А самое главное  - баня на дровах!
+							Давно таких не встречал в Барнауле. Рекомендую!
+						.reviews__author.text-right
+							span Александр
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo2.jpg') center/cover")
+						p.reviews__text.
+							Какие только русские бани и сауны в Барнауле я не видел. А здесь просто проходил мимо и решил зайти посмотреть. В итоге пробыл часа три. Не жалею потраченных денег - оно действительно того стоит. Настоящая русская баня в Барнауле!
+						.reviews__author.text-right
+							span Владимир
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo3.jpg') center/cover")
+						p.reviews__text.
+							Отличная сауна с бассейном! Ходили
+							с детками - им все очень понравилось,
+							как и взрослым. Сразу видно, комплекс действительно сделан для людей.
+							Тем, кто ещё здесь не был - очень рекомендую.
+						.reviews__author.text-right
+							span Ирина
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo1.jpg') center/cover")
+						p.reviews__text.
+							Отдыхали здесь несколько раз большой
+							компанией и все остались довольны.
+							Чисто, просторно и не дорого. Вкусно кормят. Обслуживание отличное
+							А самое главное  - баня на дровах!
+							Давно таких не встречал в Барнауле. Рекомендую!
+						.reviews__author.text-right
+							span Александр
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo2.jpg') center/cover")
+						p.reviews__text.
+							Какие только русские бани и сауны в Барнауле я не видел. А здесь просто проходил мимо и решил зайти посмотреть. В итоге пробыл часа три. Не жалею потраченных денег - оно действительно того стоит. Настоящая русская баня в Барнауле!
+						.reviews__author.text-right
+							span Владимир
+					.swiper-slide
+						.reviews__photo.mb-4(style="background: url('img/content/review-photo3.jpg') center/cover")
+						p.reviews__text.
+							Отличная сауна с бассейном! Ходили
+							с детками - им все очень понравилось,
+							как и взрослым. Сразу видно, комплекс действительно сделан для людей.
+							Тем, кто ещё здесь не был - очень рекомендую.
+						.reviews__author.text-right
+							span Ирина
+			.d-flex.justify-content-end.mb-4.mb-sm-0
+				.swiper-button-prev.reviews-prev.swiper-button--small.mr-3
+					+icon('arrow','swiper-arrow swiper-arrow--small')
+				.swiper-button-next.reviews-next.swiper-button--small
+					+icon('arrow','swiper-arrow swiper-arrow--small')
+			.btn-container.text-center
+				.btn.btn-white Все отзывы
+	section.section-news.section-pattern.section-pattern--bottom-right
+		.container
+			h1 Акции и новости
+			.row.text-white.mb-5
+				.col-lg-6.about-item
+					.embed-responsive.embed-responsive-16by9
+						.glow-wrap
+							i.glow
+						+pic('embed-responsive-item bg','content','news1','jpg')
+					.about-item__content.about-item__content--bottom
+						.about-item__title.text-big Дневные скидки!
+						.about-item__text
+						.about-item__date 29 октября 2019
+				.col-lg-6.about-item
+					.embed-responsive.embed-responsive-16by9
+						.glow-wrap
+							i.glow
+						+pic('embed-responsive-item bg','content','news2','jpg')
+					.about-item__content.about-item__content--bottom
+						.about-item__title.text-big 5-й час бесплатно!
+						.about-item__text Дарим 5-й час по будням бесплатно!
+						.about-item__date 29 октября 2019
+			.btn-container.text-center
+				.btn.btn-secondary Все новости
+	a.go-top(href="#header")
+		+icon('arrow','swiper-arrow')

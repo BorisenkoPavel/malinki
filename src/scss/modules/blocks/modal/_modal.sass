@@ -1,0 +1,55 @@
+.modal-footer, .modal-header
+	border: none
+
+.label-container.label-container--textarea
+  span
+    top: 1.5625rem
+    tranform: none
+.label-container.valid
+  .input-text
+    border: 1px solid $text
+.label-container.error
+  .input-text
+    border: 1px solid $danger
+    color: $danger
+  &:before
+    content: 'Поле заполнено некорректно'
+    color: $danger
+    font-size: 10px
+    position: absolute
+    bottom: 100%
+    right: 0
+.label-container
+  position: relative
+  display: block
+  margin-bottom: 1.3rem
+  input
+    height: 3.125rem
+  .input-text
+    background: transparent
+    border: 1px solid #BDBDBD
+    width: 100%
+    padding: 0 1.25rem
+  textarea
+    padding-top: 0.6875rem
+  .label-text
+    position: absolute
+    top: 50%
+    transform: translatey(-50%)
+    transition: font-size .3s ease, top .3s ease
+    left: 0.625rem
+    padding: 0 10px
+    display: inline-block
+    pointer-events: none
+    font-size: 1rem
+  .label-text.active
+    top: 0
+    background-color: #fff
+    font-size: 0.75rem
+input.checkbox
+  vertical-align: middle
+  margin-right: 5px
+.close
+  position: absolute
+  right: 20px
+  top: 20px

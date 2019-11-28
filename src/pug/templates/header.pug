@@ -1,0 +1,30 @@
+header.header#header.align-items-center.d-flex
+    .container.d-flex.bg-white
+        .hamburger.hamburger--spring.d-lg-none
+            .hamburger-box.d-block
+                .hamburger-inner
+        ul.nav.no-decoration.d-none.d-lg-flex.justify-content-end
+            li: a(href="") Наши залы  
+            li: a(href="") Услуги
+            li: a(href="") О комплексе
+        .logo: a(href="/"): img(src="img/general/logo.svg", alt="")
+        ul.nav.no-decoration.d-none.d-lg-flex.justify-content-start
+            li: a(href="") Отзывы
+            li: a(href="") Новости и акции
+            li: a(href="") Контакты
+    .header-mobile.py-3
+        .container.d-flex.align-items-center.justify-content-between
+            .logo-inline: a(href="/"): img(src="img/general/logo-inline.svg", alt="")
+            ul.nav.no-decoration.d-none.d-lg-flex.text-dark.justify-content-center
+                li: a.link(href="") Наши залы  
+                li: a.link(href="") Услуги
+                li: a.link(href="") О комплексе
+                li: a.link(href="") Отзывы
+                li: a.link(href="") Новости и акции
+                li: a.link(href="") Контакты
+            a.phone.link.d-none.d-xl-flex(href="tel:+73852588858")
+                +icon('phone', 'icon-contacts')
+                | 8 (3852) 58-88-58
+            .hamburger.hamburger--spring.d-lg-none
+                .hamburger-box.d-block
+                    .hamburger-inner

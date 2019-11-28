@@ -1,0 +1,111 @@
+@import "vars"
+
+/*==========  Internet explorer  ==========*/
+
+@media all and (-ms-high-contrast:none)
+  .reviews__text
+    flex: 0 0 auto
+    flex-grow: 1
+  .icon-social
+    flex-shrink: 0
+    flex-grow: 0
+  .instagram-sign
+    flex: 0 0 auto
+/*==========  FireFox  ==========*/
+
+@-moz-document url-prefix()
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1400px
++media-breakpoint-down(xl)
+
+// ≥1200px
++media-breakpoint-down(lg)
+  section
+    padding: calc(2rem + 2.5vw) 0
+  .logo
+    width: 170px
+    a
+      width: 176px
+      height: 186px
+    img
+      width: 110px
+      height: 120px
+      transform: translateY(60px)
+// ≥992px
++media-breakpoint-down(md)
+  .img-block
+    margin-bottom: 50px
+    position: relative
+    &:hover
+      img
+        transform: translate(-50%, -50%) scale(1.1)
+  .img-block__photo
+    height: 300px
+    max-width: 100%
+    &:before
+      z-index: 3
+    img
+      position: relative
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      object-fit: cover
+      
+  .img-block__title
+    right: -5px
+  
+  .about-item
+    margin-bottom: 2.5rem
+  .section-slider h1
+    width: 100%
+    
+  .instagram-sign
+    margin-bottom: 1.5rem
+
+  #header > .container
+    flex-direction: row-reverse
+// ≥768px
++media-breakpoint-down(sm)
+ .section-banner
+    padding-top: 15vh
+// ≥576px
++media-breakpoint-down(xs)
+  .gallery
+    transition: 1.5s ease 0s
+  .info-block
+    display: flex
+    max-width: 100%
+    text-align: left
+    &__img
+      flex: 0 0 114px
+    &__content
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-left: 15px
+  .section-news .about-item__content
+    height: auto
+  .instagram-sign
+    max-height: 50px
+/*==========  mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+  .swiper-container.gallery
+    position: absolute
+    width: 200%
+    top: 0
+    left: 0
+// ≤1200px
++media-breakpoint-up(xl)
