@@ -1,0 +1,177 @@
+extends ../templates/main
+
+block variables
+  - var title = 'Залы'
+block content
+  section.section-banner.section-banner--small.p-0
+    .h-100(style="background: url(/img/content/banner.jpg) no-repeat bottom/cover fixed")
+    .container.banner-content
+      h1.banner-title Залы
+  section.section-halls-page
+    .container
+      .hall-item
+        .row.mb-4
+          .col-lg-6
+            h2.mb-4 Русская баня
+            .services-list-wrapper
+              ul.services-list.info-block__desc.d-flex.text-black-50
+                li Баня на дровах
+                li Тёплый бассейн 
+                li Комната отдыха
+                li Мангал
+                li Беседка
+            p: b.text-big Настоящая русская банька на берёзовых дровах. Русская баня парит – здоровье дарит! 
+            h5.link-arrow.link-arrow--services
+              span Дополнительные Услуги:
+              +icon('arrow')
+            ul.line-decoration
+              li.mb-1 30р/шт Полотенце банное
+              li.mb-1 200р/2 кг уголь для мангала
+              li.mb-1 200р/шт веник берёзовый
+              li.mb-1 200р/шт. веник дубовый
+          .col-lg-6 
+            .swiper-container.gallery.gallery--visible
+              .swiper-wrapper
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about3','jpg')
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about2','jpg')
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about3','jpg')
+              .swiper-pagination.gallery-pagination
+        .row
+          .col-lg-6.order-lg-0.mb-4.mb-lg-0
+            h3.text-primary Цены
+            .hall-item__price
+              span 1100 <span class="text-big">руб/час</span>
+              p Стандартная стоимость посещения - (до шести человек)
+            .hall-item__price
+              span 100 <span class="text-big">руб/час</span>
+              p доплата за каждого дополнительного человека составляет
+            .hall-item__price
+              span 50 <span class="text-big">руб/час</span>
+              p доплата за каждого дополнительного человека составляет
+            i Забронированное время должно составлять не менее трёх часов.
+          .col-lg-6
+            h3.text-primary Акции:
+            .action-list.d-flex
+              .about-item__content.text-white
+                .about-item__title.text-big Пятый час в подарок!
+                p.about-item__text.text-small При оплате четырёх часов посещения пятый вы получаете в подарок
+                .about-item__date.text-small 29 октября 2019
+              .about-item__content.text-white
+                .about-item__title.text-big Пятый час в подарок!
+                p.about-item__text.text-small При оплате четырёх часов посещения пятый вы получаете в подарок
+                .about-item__date.text-small 29 октября 2019
+      .hall-item
+        .row.mb-4
+          .col-lg-6
+            h2.mb-4 Русская баня
+            .services-list-wrapper
+              ul.services-list.info-block__desc.d-flex.text-black-50
+                li Баня на дровах
+                li Тёплый бассейн 
+                li Комната отдыха
+                li Мангал
+                li Беседка
+            p: b.text-big Настоящая русская банька на берёзовых дровах. Русская баня парит – здоровье дарит! 
+            h5.link-arrow.link-arrow--services
+              span Дополнительные Услуги:
+              +icon('arrow')
+            ul.line-decoration
+              li.mb-1 30р/шт Полотенце банное
+              li.mb-1 200р/2 кг уголь для мангала
+              li.mb-1 200р/шт веник берёзовый
+              li.mb-1 200р/шт. веник дубовый
+          .col-lg-6 
+            .swiper-container.gallery.gallery--visible
+              .swiper-wrapper
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about3','jpg')
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about2','jpg')
+                .swiper-slide
+                  .embed-responsive.embed-responsive-4by3
+                    +pic('about-item embed-responsive-item bg','content','about3','jpg')
+              .swiper-pagination.gallery-pagination
+        .row
+          .col-lg-6.order-lg-0.mb-4.mb-lg-0
+            h3.text-primary Цены
+            .hall-item__price
+              span 1100 <span class="text-big">руб/час</span>
+              p Стандартная стоимость посещения - (до шести человек)
+            .hall-item__price
+              span 100 <span class="text-big">руб/час</span>
+              p доплата за каждого дополнительного человека составляет
+            .hall-item__price
+              span 50 <span class="text-big">руб/час</span>
+              p доплата за каждого дополнительного человека составляет
+            p Забронированное время должно составлять не менее трёх часов.
+          .col-lg-6
+            h3.text-primary Акции:
+            .action-list.d-flex
+              .about-item__content.text-white
+                .about-item__title.text-big Пятый час в подарок!
+                p.about-item__text.text-small При оплате четырёх часов посещения пятый вы получаете в подарок
+                .about-item__date.text-small 29 октября 2019
+              .about-item__content.text-white
+                .about-item__title.text-big Пятый час в подарок!
+                p.about-item__text.text-small При оплате четырёх часов посещения пятый вы получаете в подарок
+                .about-item__date.text-small 29 октября 2019
+      //- h2.mb-4 Финский зал
+      //- .row.mb-4
+      //-   .col-lg-6
+      //-     p: b.text-big Зал с финской парной и тёплым бассейном с увлекательной водной горкой TOBOGGAN! Приведёт в восторг и детей, и взрослых!  
+      //-     h5.mb-2.text-secondary Услуги:
+      //-     p Финская сауна, тёплый бассейн, водные аттракционы, видео, аудио, караоке
+      //-     h5.mb-2.text-secondary Скидки и акции:
+      //-     p Акция «пятый час в подарок»: При оплате четырёх часов посещения пятый вы получаете в подарок
+      //-     p Дневные скидки: С понедельника по четверг с 8 до 16 часов действуют дневные скидки. Стоимость часа посещения до четырёх человек – 800 рублей. 
+      //-     h5.mb-2.text-secondary Цены
+      //-     p 100 рублей в час (до четырёх человек). Свыше четырёх человек доплата за каждого дополнительного человека составляет 100 рублей/час (дети до 12 лет – 50 рублей/час)
+      //-     h5.mb-2.text-secondary Дополнительные платные услуги:
+      //-     p Полотенце банное – 30 рублей/шт.
+      //-   .col-lg-6
+      //-     .swiper-container.gallery.gallery--visible
+      //-       .swiper-wrapper
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about3','jpg')
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about2','jpg')
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about3','jpg')
+      //-       .swiper-pagination.gallery-pagination
+      //- h2.mb-4 Турецкий зал
+      //- .row.mb-4
+      //-   .col-lg-6
+      //-     p: b.text-big Зал с турецкий хамамом  и тёплым бассейном с гидромассажем – идеальное место для расслабления и релакса.  Турецкий хамам – не просто баня! Это дворец наслаждения, где отдыхает и тело, и душа. 
+      //-     h5.mb-2.text-secondary Услуги:
+      //-     p Турецкая парная, тёплый бассейн, гидромассаж, тв/аудио, караоке, ароматы для парных
+      //-     h5.mb-2.text-secondary Скидки и акции:
+      //-     p Акция «пятый час в подарок»: При оплате четырёх часов посещения пятый вы получаете в подарок
+      //-     p Дневные скидки: С понедельника по четверг с 8 до 16 часов действуют дневные скидки. Стоимость часа посещения до четырёх человек – 700 рублей. 
+      //-     h5.mb-2.text-secondary Цены
+      //-     p Стандартная стоимость посещения – 900 рублей в час (до четырёх человек). Свыше четырёх человек доплата за каждого дополнительного человека составляет 100 рублей/час (дети до 12 лет – 50 рублей/час)
+      //-     h5.mb-2.text-secondary Дополнительные платные услуги:
+      //-     p Полотенце банное – 30 рублей/шт.
+      //-   .col-lg-6
+      //-     .swiper-container.gallery.gallery--visible
+      //-       .swiper-wrapper
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about3','jpg')
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about2','jpg')
+      //-         .swiper-slide
+      //-           .embed-responsive.embed-responsive-4by3
+      //-             +pic('about-item embed-responsive-item bg','content','about3','jpg')
+      //-       .swiper-pagination.gallery-pagination

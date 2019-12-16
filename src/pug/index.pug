@@ -6,27 +6,31 @@ block variables
 block content
 	section.section-banner.dark-overlay
 		+pic('banner bg', 'content', 'banner','jpg')
-		.swiper-container.slider-banner.z-index
-			.swiper-wrapper
-				.swiper-slide.text-white.text-center
-					.container
-						.row
-							.col-lg-6.offset-lg-3
-								h1 Русская банька на березовых дровах
-								p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
-				.swiper-slide.text-white.text-center
-					.container
-						.row
-							.col-lg-6.offset-lg-3
-								h1 Русская банька на березовых дровах
-								p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
-		
-			.btn-container.text-center
-				.btn.btn-lg ЗВОНИТЕ: 58-88-58	
-		.swiper-button-prev.banner-button-prev.d-none.d-lg-flex
-			+icon('arrow','swiper-arrow')
-		.swiper-button-next.banner-button-next.d-none.d-lg-flex
-			+icon('arrow','swiper-arrow')
+		.container.z-index.position-relative.text-white.text-center
+			.main-banner-content
+				h1 Русская банька на березовых дровах
+				p Вы по достоинству оцените жаркую парную на берёзовых дровах с её целебным паром. После баньки можно окунуться в тёплый бассейн!
+				p.mb-5 Закрытый дворик с беседкой и мангалом станет прекрасным дополнением для Вашего отдыха.
+				.btn.btn-lg ЗВОНИТЕ: 58-88-58
+		//- .swiper-container.slider-banner.z-index
+		//- 	.swiper-wrapper
+		//- 		.swiper-slide.text-white.text-center
+		//- 			.container
+		//- 				.row
+		//- 					.col-lg-6.offset-lg-3
+		//- 						h1 Русская банька на березовых дровах
+		//- 						p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
+		//- 		.swiper-slide.text-white.text-center
+		//- 			.container
+		//- 				.row
+		//- 					.col-lg-6.offset-lg-3
+		//- 						h1 Русская банька на березовых дровах
+		//- 						p.mb-5 Вы по достоинству оцените жаркую парную, в которой расположена купель с бодрящей ледяной водой. В комнате отдыха к Вашим услугам: мангал, TV, полотенца, простыни. Кроме того, в каждой бане, имеется внутренний закрытый дворик.
+	
+		//- .swiper-button-prev.banner-button-prev.d-none.d-lg-flex
+		//- 	+icon('arrow','swiper-arrow')
+		//- .swiper-button-next.banner-button-next.d-none.d-lg-flex
+		//- 	+icon('arrow','swiper-arrow')
 	section.section-halls.section-pattern
 		.container
 			h1 Наши залы
@@ -51,14 +55,14 @@ block content
 					.info-block
 						img.info-block__img.mb-3(src="img/general/sauna.svg", alt="")
 						.info-block__content
-							.info-block__title.mb-1 3 бани вместимостью до 8 и до 17 человек
+							.info-block__title.mb-1 Три зала вместимостью до 10 человек
 							ul.info-block__desc
-								li с купелями, хамамом и джакузи
+								li русская баня, финская сауна, турецкий хамам
 				.col-sm-4.text-center
 					.info-block
 						img.info-block__img.mb-3(src="img/general/bbq.svg", alt="")
 						.info-block__content
-							.info-block__title.mb-1 Уютный дворик с мангалом и беседкой
+							.info-block__title.mb-1 Уютный дворик c беседкой и зоной барбекю
 							ul.info-block__desc
 								li разнообразит ваш отдых
 				.col-sm-4.text-center
@@ -67,7 +71,7 @@ block content
 						.info-block__content
 							.info-block__title.mb-1 Увлекательная водная горка TOBOGGAN
 							ul.info-block__desc
-								li приводит в восторг детей и взрослых
+								li приведёт в восторг детей и взрослых
 	section.section-promo.text-white.dark-overlay
 		+pic('promo bg','content','promo','jpg')
 		.container.z-index.position-relative
@@ -78,7 +82,7 @@ block content
 	section.section-about-us
 		.container
 			h1 Малинки в цифрах
-			.row.text-white
+			.row.text-white.mb-n5
 				.col-sm-6.col-lg-4.about-item
 					.embed-responsive.embed-responsive-4by3
 						.glow-wrap
@@ -86,7 +90,7 @@ block content
 						+pic('embed-responsive-item bg','content','about1','jpg')
 					.about-item__content
 						.about-item__num.about-item__num1.wow 0
-						.about-item__text Радуем Вас с 2015 года
+						.about-item__text Радуем Вас с 2013 года
 				.col-sm-6.col-lg-4.about-item
 					.embed-responsive.embed-responsive-4by3
 						.glow-wrap
@@ -94,7 +98,7 @@ block content
 						+pic('embed-responsive-item bg','content','about2','jpg')
 					.about-item__content
 						.about-item__num.about-item__num2.wow 0
-						.about-item__text 1828 довольных клиентов
+						.about-item__text 3824 Довольных клиентов
 				.col-sm-6.offset-sm-3.offset-lg-0.col-lg-4.about-item
 					.embed-responsive.embed-responsive-4by3
 						.glow-wrap
@@ -102,22 +106,21 @@ block content
 						+pic('embed-responsive-item bg','content','about3','jpg')
 					.about-item__content
 						.about-item__num.about-item__num3.wow 0
-						.about-item__text У нас 3 уютных зала 
+						.about-item__text уютных зала с русской парной, финской сауной и турецких хамамом 
 	section.section-slider.section-pattern.section-pattern--bottom
 		.container
 			h1 Малинки — бани и сауны в Барнауле
 			.row
 				.col-lg-6.order-1.order-lg-0.sider-left-block.wow(data-wow-offset="200")
-					p: b Банный комплекс "Малинки", приглашает Вас окунуться в незабываемый водный мир!
-					p.
-						В теплые, циркуляционные бассейны с гидро-аэро массажем,
-						гейзером, противотоком. Понежиться в большой джакузи
-						и получить массу удовольствий. Прокатиться с водной горки в бассейн с "морской черепахой" в стиле "океанской стихии"
-						и почувствовать себя повелителем подводного мира.
+					p: b Банный комплекс «Малинки»  приглашает гостей окунуться в разнообразие банных традиций. Ведь у нас представлены сразу три вида парных – русская баня на берёзовых дровах, финская сауна, турецкий хамам. 
+					p В чём же отличие?
+					p Русская баня характеризуется высокой влажностью воздуха – 40-70%. Температура – относительно невысокая 50-70°С. В русской бане всегда влажный пар. 
 					ul.line-decoration
-						li Финская парная, сделанная из осины, приятный запах, целебные свойства, прекрасное настроение.
-						li Русская баня - парит здоровья дарит.
-						li Турецкая баня (хамам) с высокой влажностью - улучшает здоровье, привносит положительные эмоции и ощущение общей гармонии души и тела. Хамам приближает нас к пониманию "средиземноморского рая".
+						li Русская баня характеризуется высокой влажностью воздуха – 40-70%. Температура – относительно невысокая 50-70°С. В русской бане всегда влажный пар. 
+						li В отличие от русской бани, в финской парной сухой горячий воздух. Температура парной достигает 100- 110°С, при этом влажность воздуха 10-20%. В финской сауне всегда сухой пар.
+						li В хамаме температуры не такие экстремальные, как в финской сауне – всего 40-50 С°, но влажность при этом достигает примерно 80%. Хамам любим многими женщинами из-за мягких условий и возможности проводить эффективные косметические процедуры.
+					p Поэтому в нашем банном комплексе каждый может выбрать отдых по вкусу, а мы позаботимся о вашем комфорте!  
+					p «Малинки» рады гостям в любое время суток! 
 					a.link-arrow(href="")
 						| Подробнее
 						+icon('arrow')

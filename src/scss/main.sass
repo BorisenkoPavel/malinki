@@ -25,6 +25,9 @@
 
 .section-banner
   padding-top: 27vh
+.main-banner-content
+  max-width: 550px
+  margin: auto
 .dark-overlay
   &:before
     content: ''
@@ -105,6 +108,7 @@
       height: 100%
       backface-visibility: hidden
       transition: .5s ease
+      max-height: 400px
   &__title
     background-color: #fff
     position: absolute
@@ -155,7 +159,8 @@
   overflow: hidden
 .embed-responsive-4by3::before
   padding-top: 70%
-
+.about-item
+  margin-bottom: 2.5rem
 .about-item .embed-responsive
   transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
   box-shadow: 2px 2px 10px 2px rgba(0,0,0,.2)
@@ -251,19 +256,25 @@
     opacity: 1
     transform: translatey(0)
 .sider-left-block.animated
-  & > *:nth-child(1)
-    transition-delay: .3s
   & > *:nth-child(2)
+    transition-delay: .2s
+  & > *:nth-child(3)
+    transition-delay: .4s
+.sider-left-block.animated
+  & > *:nth-child(4)
     transition-delay: .6s
 .sider-left-block.animated
-  & > *:nth-child(3)
-    transition-delay: .9s
+  & > *:nth-child(5)
+    transition-delay: .8s
 .sider-left-block.animated
-  & > *:nth-child(4)
+  & > *:nth-child(6)
+    transition-delay: 1s
+.sider-left-block.animated
+  & > *:nth-child(7)
     transition-delay: 1.2s
 .sider-left-block.animated
-  & > *:nth-child(4)
-    transition-delay: 1.5s
+  & > *:nth-child(8)
+    transition-delay: 1.4s
     
 .sider-left-block.animated
   .link-arrow
@@ -275,6 +286,9 @@
     transform: translatey(30px)
     transition: .7s ease
 .gallery.animated
+  opacity: 1
+  transform: translatex(0)
+.gallery.gallery--visible
   opacity: 1
   transform: translatex(0)
 .gallery
@@ -290,6 +304,9 @@
     bottom: 0
     transform: translateY(432px)
     background-image: url(/img/general/pattern-bottom.svg)
+.section-reviews-page
+  .reviews__photo:before
+    background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.3) 5.5px, rgba(0, 0, 0, 0.3) 6px)
 .reviews
   &__photo
     width: 100px
@@ -333,7 +350,15 @@
       transform: translate(15px, 10px)
     &:nth-child(3n+3) .reviews__photo:before
       transform: translate(15px, -10px)
-  
+.review 
+  padding: 0 15px
+  display: flex
+  flex-direction: column
+  margin-bottom: 3rem
+  &:nth-child(3n+2) .reviews__photo:before
+    transform: translate(15px, 10px)
+  &:nth-child(3n+3) .reviews__photo:before
+    transform: translate(15px, -10px)
 .section-news
   .about-item__text
     font-weight: 400
@@ -362,4 +387,122 @@
   opacity: 0!important
 
 
+.banner-content
+  position: absolute
+  left: 0
+  bottom: 0
+  right: 0
+  .banner-title
+    background: rgba(243, 243, 243, 0.9)
+    z-index: 20
+    padding: 1.25rem 0
+    padding-right: 2.5rem
+    color: $accent
+    text-align: left
+    display: inline-block
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      background: #fff
+      width: 8px
+      top: 0
+      height: 100%
+
+.section-banner.section-banner--small
+  height: 35vh
+  .banner-title
+    font-weight: bold
+    margin-bottom: 0
+    &:before
+      content: ''
+      position: absolute
+      width: 2000px
+      bottom: 0
+      top: 0
+      background-color: rgba(243, 243, 243, 0.9)
+      right: 100%
+.review-form-bg-container
+  perspective: 1000px
+.review-form-bg
+  will-change: transform
+  backface-visibility: hidden
+  animation: anime 5s ease infinite
+  display: block
+@keyframes anime
+  0%
+    transform: skew(0) rotatex(0) scale(1)
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))
+
+  33% 
+    transform: skew(2deg) rotatex(-5deg) scale(1.05)
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, .2))
+
+  66% 
+    transform: skew(0) rotatex(0) scale(1)
+
+  100%
+    transform: skew(0) rotatex(0) scale(1)
+
+
+.map
+  margin-bottom: -10px
+
+section.bg-primary
+  .swiper-pagination-bullet
+    background-color: #fff
+.section-halls-page
+  .swiper-container.gallery
+    position: relative
+  .about-item__content
+    position: relative!important
+    padding: 15px
+    max-width: 47.5%
+    left: 0
+    top: 0
+  .about-item__content:nth-child(3n+2):before
+    left: auto
+    right: 0
+  .line-decoration.active
+    opacity: 1
+    transform: translatey(0)
+    transition-delay: .2s
+  .line-decoration
+    transform: translatey(-20px)
+    opacity: 0
+    transition: .3s
+    display: none
+
+.services-list-wrapper
+  overflow: hidden
+.services-list
+  flex-wrap: wrap
+  display: flex
+  margin-left: -16px
+  li
+    position: relative
+    margin-right: 12px
+    &:before
+      margin-right: 12px
+.link-arrow--services
+  color: $accent
+  cursor: pointer
+  span
+    text-decoration: underline
+
+.action-list
+  justify-content: space-between
+  flex-wrap: wrap
+
+
+.hall-item
+  padding: 2.5rem 0
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+.hall-item__price
+  display: flex
+  & > span
+    font-size: 30px
+    color: $primary
+    width: 250px
 @import media

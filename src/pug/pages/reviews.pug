@@ -1,0 +1,82 @@
+extends ../templates/main
+
+block variables
+  - var title = 'Отзывы'
+block content
+  section.section-banner.section-banner--small.p-0
+    .h-100(style="background: url(/img/content/banner.jpg) no-repeat bottom/cover fixed")
+    .container.banner-content
+      h2.banner-title Отзывы
+  section.section-reviews-page.section-pattern
+    .container
+      .row.reviews.mb-5
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo1.jpg') center/cover")
+          p.reviews__text.
+            Отдыхали здесь несколько раз большой
+            компанией и все остались довольны.
+            Чисто, просторно и не дорого. Вкусно кормят. Обслуживание отличное
+            А самое главное  - баня на дровах!
+            Давно таких не встречал в Барнауле. Рекомендую!
+          .reviews__author.text-right
+            span Александр
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo2.jpg') center/cover")
+          p.reviews__text.
+            Какие только русские бани и сауны в Барнауле я не видел. А здесь просто проходил мимо и решил зайти посмотреть. В итоге пробыл часа три. Не жалею потраченных денег - оно действительно того стоит. Настоящая русская баня в Барнауле!
+          .reviews__author.text-right
+            span Владимир
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo3.jpg') center/cover")
+          p.reviews__text.
+            Отличная сауна с бассейном! Ходили
+            с детками - им все очень понравилось,
+            как и взрослым. Сразу видно, комплекс действительно сделан для людей.
+            Тем, кто ещё здесь не был - очень рекомендую.
+          .reviews__author.text-right
+            span Ирина
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo1.jpg') center/cover")
+          p.reviews__text.
+            Отдыхали здесь несколько раз большой
+            компанией и все остались довольны.
+            Чисто, просторно и не дорого. Вкусно кормят. Обслуживание отличное
+            А самое главное  - баня на дровах!
+            Давно таких не встречал в Барнауле. Рекомендую!
+          .reviews__author.text-right
+            span Александр
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo2.jpg') center/cover")
+          p.reviews__text.
+            Какие только русские бани и сауны в Барнауле я не видел. А здесь просто проходил мимо и решил зайти посмотреть. В итоге пробыл часа три. Не жалею потраченных денег - оно действительно того стоит. Настоящая русская баня в Барнауле!
+          .reviews__author.text-right
+            span Владимир
+        .col-sm-6.col-md-4.review
+          .reviews__photo.mb-4(style="background: url('img/content/review-photo3.jpg') center/cover")
+          p.reviews__text.
+            Отличная сауна с бассейном! Ходили
+            с детками - им все очень понравилось,
+            как и взрослым. Сразу видно, комплекс действительно сделан для людей.
+            Тем, кто ещё здесь не был - очень рекомендую.
+          .reviews__author.text-right
+            span Ирина
+
+      .row
+        .col-lg-5
+          h3 Оставить отзыв
+          form.mb-4
+            label.label-container.error
+              input.input-text(type="text")
+              span.label-text Представьтесь, пожалуйста
+            label.label-container
+              input.input-text(type="tel")
+              span.label-text Ваш номер телефона 
+            label.label-container.label-container--textarea
+              textarea.input-text(name="", rows="5")
+              span.label-text Ваш комментарий
+            label.label-container
+              input.checkbox.h-auto.d-inline-block(type="checkbox") 
+              span.text-small: small С <a href="">политикой конфиденциальности</a> ознакомлен(а), даю согласие на обработку моих персональных данных
+            button.btn.justify-content-center(type='submit') Отправить
+        .col-6.d-none.d-lg-block.text-center.review-form-bg-container
+          +pic('review-form-bg','content','table-img2','png')

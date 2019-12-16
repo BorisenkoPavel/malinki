@@ -1,0 +1,43 @@
+extends ../templates/main
+
+block variables
+  - var title = 'Контакты'
+block content
+  section.section-banner.section-banner--small.p-0
+    .h-100(style="background: url(/img/content/banner.jpg) no-repeat bottom/cover fixed")
+    .container.banner-content
+      h2.banner-title Контакты
+  section.section-company
+    .container
+      .row
+        .col-lg-6.order-1.order-lg-0
+          h3 Забронировать
+          form.mb-4
+            label.label-container.error
+              input.input-text(type="text")
+              span.label-text Представьтесь, пожалуйста
+            label.label-container
+              input.input-text(type="text")
+              span.label-text Ваш номер телефона 
+            
+            label.label-container
+              input.checkbox.h-auto.d-inline-block(type="checkbox") 
+              span.text-small: small С <a href="">политикой конфиденциальности</a> ознакомлен(а), даю согласие на обработку моих персональных данных
+            button.btn.justify-content-center(type='submit') Отправить
+        .col-lg-6
+          dl.contacts-block
+              dt: h3 Контакты
+              dd 
+                +icon('geo','icon-contacts')
+                a.link(href="") Барнаул, ул. Фурманова, 81
+              dd 
+                +icon('mail','icon-contacts')
+                a.link(href="mailto: info@malinki-barnaul.ru") info@malinki-barnaul.ru
+              dd.contacts-phone
+                +icon('phone','icon-contacts')
+                a.link.mb-2(href="tel:+73852588858") +7 (3852) 58-88-58
+                <br>
+                a.link.mb-2(href="tel:+79635351919") +7 (963) 535-19-19
+                <br>
+                a.link.mb-2(href="tel:+73852386878") +7 (3852) 38-68-78
+  iframe.map(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4dbdbc95096b52130690cc84831b177ed604687d929092e6e472cb90cf003bba&amp;source=constructor" width="100%" height="400" frameborder="0")
